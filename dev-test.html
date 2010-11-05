@@ -5,20 +5,33 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<title>dev-test</title>
+	<link rel="stylesheet/less" href="css/ui/document.less" type="text/css" charset="utf-8">
+	<script src="lib/less.js" type="text/javascript"></script>
+  
 	<script data-main="lib/main.js" src="lib/require-jquery.js" type="text/javascript" charset="utf-8"></script>
 	
 </head>
 
-<body>
+<body class="sapphire">
 
-<div id="page" contenteditable="true">
-  <p>This is some text</p>
-  
+
+<div class="notebook">
+  <div class="document">
+    <div class="text-block">
+      This is the contents of a text-block
+    </div>
+    <div class="text-block">
+      Another Text Block
+    </div>
+    
+    <div class="table-block">
+      <table border="0" cellspacing="5" cellpadding="5">
+        <tr><th>Header</th></tr>
+        <tr><td>Data</td></tr>
+      </table>
+    </div>
+  </div>
 </div>
-
-<div class="console">Console 1</div>
-
-<div class="console">Console 2</div>
 
 </body>
 </html>
