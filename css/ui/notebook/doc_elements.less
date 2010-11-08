@@ -1,0 +1,52 @@
+.ui {
+    .notebook {
+        .doc_elements {
+            
+            .document-element {
+                padding: 1em;
+                text-align:left;
+                
+                &:hover { 
+                    .css3_border_radius();
+                    background-color: #FFF8E1
+                }
+    
+                &.selected {
+                    border: 1px dotted #395BFF;
+                }
+            }
+
+            .text-block {
+                .document-element
+            }
+
+            .table-block {
+                .document-element;
+    
+                table {
+                    border: 1px solid #6699CC;
+                    border-collapse: collapse;
+                    margin: 20px;
+        
+                    th {
+                        border-bottom: 1px dashed #6699CC;
+                        padding: 12px;
+                    }
+        
+                    td {
+                        color: #666699;
+                        padding: 9px;
+                    }
+        
+                    tbody tr:hover td {
+                        background-color: #D0DAFD;
+                        color: #333399;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
