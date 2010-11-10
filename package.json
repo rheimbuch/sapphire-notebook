@@ -13,7 +13,7 @@
     "promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.1",
     "transporter": "http://github.com/kriszyp/transporter/zipball/master",
     "underscore": "jar:https://github.com/documentcloud/underscore/zipball/1.1.2!/underscore.js",
-    "backbone": "jar:https://github.com/documentcloud/backbone/zipball/0.2.0!/backbone.js",
+    "backbone": "jar:https://github.com/documentcloud/backbone/zipball/0.3.0!/backbone.js",
     "less": "https://github.com/cloudhead/less.js/zipball/v1.0",
     "coffee-script": "jar:http://github.com/jashkenas/coffee-script/zipball/master!/lib/coffee-script.js",
     "multifn": "https://github.com/rheimbuch/multifn/zipball/master",
