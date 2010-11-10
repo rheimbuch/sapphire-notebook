@@ -1,4 +1,4 @@
-define ['backbone', 'underscore'], (Backbone, underscore) ->
+define ["backbone", "underscore"], (Backbone, underscore) ->
   _ = underscore._
   
   Textblock = Backbone.View.extend
