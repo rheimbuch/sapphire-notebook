@@ -1,0 +1,34 @@
+{
+  "name":"sapphire",
+  "description": "Sapphire Notebook Client",
+  "version":"v0.0.1",
+  "author": {
+    "name": "Ryan Heimbuch",
+    "email": "rheimbuch@gmail.com"
+  },
+  "mappings": {
+    "jsgi-node": "jar:http://github.com/kriszyp/jsgi-node/zipball/v0.2.2!/lib/jsgi-node.js",
+    "commonjs-utils": "http://github.com/kriszyp/commonjs-utils/zipball/v0.2.1",
+    "pintura": "http://github.com/kriszyp/pintura/zipball/v0.2.3",
+    "promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.1",
+    "transporter": "http://github.com/kriszyp/transporter/zipball/master",
+    "underscore": "jar:https://github.com/documentcloud/underscore/zipball/1.1.2!/underscore.js",
+    "backbone": "jar:https://github.com/documentcloud/backbone/zipball/0.2.0!/backbone.js",
+    "less": "https://github.com/cloudhead/less.js/zipball/v1.0",
+    "coffee-script": "jar:http://github.com/jashkenas/coffee-script/zipball/master!/lib/coffee-script.js",
+    "multifn": "https://github.com/rheimbuch/multifn/zipball/master",
+    "matchjs": "jar:https://github.com/jfd/match-js/zipball/master!/match.js",
+    "underscore": "jar:https://github.com/documentcloud/underscore/zipball/1.1.2!/underscore.js",
+    "showdown": "jar:https://github.com/coreyti/showdown/zipball/master!/src/showdown.js"
+  },
+  
+  "compiler": {
+    "module": "jar:http://github.com/jashkenas/coffee-script/zipball/master!/lib/coffee-script.js",
+    "function": "compile"
+  },
+  "extension": ".coffee"
+  
+
+  
+  
+}
