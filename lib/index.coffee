@@ -1,3 +1,3 @@
 require('app')
-# require('pintura/util/repl').start();
+require('pintura/util/repl').start();
 
