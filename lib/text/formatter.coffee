@@ -1,5 +1,6 @@
-define ["showdown", "multifn/multifn"], (Showdown, Multi) ->
+define ["showdown", "multifn/multifn"], (showdown, Multi) ->
   formatter = Multi();
+  Showdown = showdown.Showdown;
   
   formatter.implement [{format:'plaintext', text:String}], (obj) -> obj.text || ''
   

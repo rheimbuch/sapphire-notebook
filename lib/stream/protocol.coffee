@@ -1,5 +1,5 @@
 
-define(['multifn/protocol'], (Protocol) ->
+define ["multifn/protocol"], (Protocol) ->
   Protocol
     readElement: "Reads a single element from a stream."
     read: "Reads a sequence of elements from a stream."
