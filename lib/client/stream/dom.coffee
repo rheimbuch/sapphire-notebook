@@ -1,7 +1,7 @@
-
-define ["stream/protocol", "matchjs", "underscore"], (Stream, Match, underscore) ->
+define ["stream/protocol", "matchjs", "underscore"], (Stream, matchjs, underscore) ->
   
   _ = underscore._
+  Match = matchjs.Match
   
   DomElement = 
     __compare__: (obj) ->
@@ -23,5 +23,3 @@ define ["stream/protocol", "matchjs", "underscore"], (Stream, Match, underscore)
   
   Stream.write.implement [DomElement, Array], (el, array) ->
     _.each array, (item) -> Stream.write(el, item)
-  
-});

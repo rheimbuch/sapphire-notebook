@@ -1,7 +1,7 @@
-
-define ['stream/protocol', 'matchjs', 'underscore'], (Stream, Match, underscore) ->
+define ['stream/protocol', 'client/stream/dom', 'matchjs', 'underscore'], (Stream, matchjs, underscore) ->
   
   _ = underscore._
+  Match = matchjs.Match
   
   jQueryElement = 
     __compare__: (obj) ->
@@ -12,5 +12,3 @@ define ['stream/protocol', 'matchjs', 'underscore'], (Stream, Match, underscore)
   
   Stream.write.implement [jQueryElement, String], (el, str) ->
     _.each el.get(), (domEl) -> Stream.write(domEl, str)
-  
-});
