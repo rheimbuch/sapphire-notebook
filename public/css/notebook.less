@@ -8,11 +8,35 @@
 
 
 /*@base_color: #07090B;*/
-@base_color: #0A1326;
-@base_light: lighten(@base_color, 85);
+@base_color: #1B68B1;
+@base_light: lighten(@base_color, 20);
 @gradient_dark: @base_color;
 @gradient_light: lighten(@gradient_dark, 20);
 
+@complement: spin(@base_color, 180);
+@complement_fade1: desaturate(lighten(@complement, 56),50);
+
+@triad1: @base_color;
+@triad2: spin(@triad1, 120);
+@triad3: spin(@triad2, 120);
+
+@split_comp_left: spin(@base_color, -40);
+@split_comp_right: spin(@base_color, 40);
+
+@contrast_color1: @triad3;
+@base_fade1: desaturate(@base_color, 40);
+
+@light_background: desaturate(lighten(@base_color, 55), 50);
+@light_border: darken(@light_background, 20);
+@dark_border: darken(@light_border, 10);
+
+@highlight1: @complement;
+@light_highlight1: lighten(@highlight1, 45);
+
+@highlight2: @triad3;
+@light_highlight2: lighten(@highlight2, 45);
+
+@text_background: #fff;
 .sapphire {
     .textured-background {
         background: #DDD url('../images/notebook-background-texture.png') repeat top left;
