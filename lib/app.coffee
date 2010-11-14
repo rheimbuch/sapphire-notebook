@@ -5,6 +5,8 @@ Cascade = require("pintura/jsgi/cascade").Cascade
 Transporter = require("transporter/jsgi/transporter").Transporter
 Backbone = require('backbone')
 require('showdown')
+require('multifn/multifn')
+require('matchjs')
 
 print("Starting Sappire Server");
 
