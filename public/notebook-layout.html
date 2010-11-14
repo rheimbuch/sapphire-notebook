@@ -24,6 +24,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
+
+    
+    
     <!-- Sapphire Javascript -->
     <script data-main="js/main.js" src="js/require-jquery.js" type="text/javascript" charset="utf-8"></script>
     
@@ -69,28 +72,37 @@
 </head>
 
 
-<body class="sapphire">
+<body>
 
-<div id="notebook">
-  
-  <div class="sidebar">
-    <div class="menubar">
+<div class="sapphire">
+
+  <div id="header">
+    <div class="title">
+      <h1>Sapphire</h1>
     </div>
-    
-    <ul class="documents">
-      <li>Cell Staining</li>
-      <li>Lateral Disection</li>
-      <li>Document 3</li>
+    <ul class="links">
+      <li><a href="#">All Notebooks</a></li>
+      <li><a href="#">Account</a></li>
     </ul>
   </div>
-  
-  <div class="view">
-    <div class="menubar">
-      <h3>Sapphire</h3>
-    </div>
-    
-    <div class="scrollpane">
-      <div class="document">
+
+
+  <div id="sidebar">
+
+    <ul class="documents">
+      <li class="current">Cell Staining</li>
+      <li><a href="#">Lateral Disection</a></li>
+      <li><a href="#">Document 3</a></li>
+    </ul>
+  </div>
+
+  <div id="view">
+
+    <div class="document yui-skin-sam">
+      <div class="document-heading">
+        Document
+      </div>
+      <div class="document-body">
         <div class="text-block">
           This is the contents of a text-block
         </div>
@@ -106,10 +118,18 @@
         </div>
       </div>
     </div>
-    
-  </div>
 
+  </div>
   
+  <div id="footer">
+    <ul>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      
+      
+    </ul>
+  </div>
 </div>
 
 

@@ -49,109 +49,162 @@
 }
 
 
-.sapphire {
-    
-    #notebook {
-        position: absolute;
-        top:0;right:0;bottom:0;left:0;
-        overflow: hidden;
-        @menubar-height: 50px;
-        @nav-width: 190px;
-        
-        .textured-background;
-        
-        .panel {
-            .menubar {
-                position:absolute;
-                top:0;left:0;right:0;
-                height:@menubar-height;
 
-                .css3_linear_gradient(@gradient_light, @gradient_dark);
-                z-index: 1001;
+.sapphire {
+    .grid();
+/*    margin:1em auto;*/
+    height:100%;
+/*    min-height:400px;*/
+    background-color: @light_background;
+    .css3_linear_gradient(@light_background, darken(@light_background, 7));
+/*    .css3_border_radius(10px 10px 10px 10px);*/
+/*    .css3_box_shadow(0, 0, 10px, #555);*/
+    
+
+    
+    #header {
+        .grid_span(8);
+        @text_color: @light_background;
+        
+        background-color: @base_light;
+        .css3_linear_gradient(@base_color, @base_light);
+        border-bottom: 2px solid @base_color;
+        height:@header_height;
+/*        .css3_border_radius(10px 10px 0 0);*/
+        
+        
+        line-height: @header_height;
+        color: @text_color ;
+        
+        .title {
+            height: @header_height;
+            .grid_span(3);
+            .grid_left;
+            .grid_gap_none;
+            padding-left: 1em;
+            h1 {
+                margin:0;padding:0;
+                line-height: @header_height;
+                color: @text_color;
+            }
+        }
+        
+        .links {
+            .grid_span(3);
+            .grid_right;
+            .grid_gap_none;
+            font-size:80%;
+            text-align:right;
+            padding-right: 1em;
+            li {
+                display: inline;
+                padding: 0 0.5em 0 0.5em;
+            }
+            a {
+                color: @text_color;
+                text-decoration: none;
                 
-                h1, h2, h3 {
-                    margin-top:@menubar-height/3;
-                    color: @base_light;
+                &:hover {
+                    text-decoration: underline;
                 }
             }
-            
-            padding-top: @menubar-height;
         }
         
         
+    }
+    
         
-        .sidebar {
-            position: absolute;
-            top:0px;
-            left:0px;
-            bottom:0px;
-            width:@nav-width;
-            z-index:1000;
-            
-            .css3_linear_gradient(@gradient_dark, @gradient_light, left top, -45deg, right bottom);
-            
-            .panel;
-            
-            color:@base_light;
-            
-            .css3_box_shadow(2px, 0px, 10px, #333);
-            
-            
-            ul.documents {
-                li {
-                    margin: 1px 0;
-                    padding: 1.5em;
+        
+        
+    #sidebar {
+        .grid_span(2);
+        .grid_left;
+        
+        
+        color:@base_light;
+        
+        
+        
+        ul.documents {
+            margin: 5em 0 2em 2em;
+            li {
+                margin: 1px 0;
+                padding: 1em;
+                .css3_border_radius(2em 0 0 2em);
+                
+                color: @base_fade1;
+                text-align: right;
+                
+                a {
+                    color: @base_fade1;
+                    text-decoration: none;
                     
-                    text-align: right;
-                    .css3_linear_gradient(lighten(@gradient_dark,10), lighten(@gradient_dark,30), left top, -45deg, right bottom);
+
+                }
+                
+                
+                &.current {
+                    background-color: @text_background;
+                    color: @base_fade1;
+/*                    .css3_box_shadow(3px, 3px, 3px, #6A6A6A);*/
+                    border: 1px solid @light_border;
                     
-                    border-right: 2px solid darken(@base_light, 30);
+                    border-right: none;
                     
+                    a {
+                        color: @base_fade1;
+                    }
                     
                     &:hover {
-                        .css3_linear_gradient(lighten(@gradient_light,50), lighten(@gradient_dark,30), left top, -45deg, right bottom);
-                        padding-left: 2em;
-                        .ui.effects.inset_shadow(1px, 2px, 4px, lighten(@base_color,10));
-                        border-right: 2px none lighten(@base_color,50);
+                        border-color: @dark_border;
                     }
                 }
+                
+                &:hover {                    
+                    a {
+                        color: @highlight1;
+                        text-decoration: underline;
+                    }
+                }
+                
             }
-            
-            
         }
         
-        .view {
-            position: absolute;
-            top:0px;
-            left:@nav-width;
-            right:0;
-            bottom:0;
-            overflow: hidden;
+        
+    }
+        
+    #view {
+        
+        .grid_span(6);
+        .grid_left;
+                
+        .document {
+            min-width: 500px;
+            margin: 1em;
+            margin-left:0;
+            text-align: left;
+            background-color: @text_background;
+            border: 1px solid @light_border;
             
-            .panel;
+            .css3_border_radius(10px);
             
-            .menubar {
-                .css3_box_shadow(0px, 2px, 10px, #333);
+            &:hover{
+                border-color: @dark_border;
             }
-            
-            .scrollpane {
-                position:absolute;
-                top:@menubar-height;left:0;right:0;bottom:0;
-                overflow: auto;
+
+            .document-heading {
+                @heading_height: 1em;
+                font-size: 110%;
+                padding: 1em;
+                line-height: @heading_height;
+                background-color: lighten(@base_light, 20);
+                .css3_border_radius(10px 10px 0 0);
+                border-bottom: 2px solid @light_border;
                 
             }
             
-            
-            .document {
-                min-width: 500px;
-                margin: 1em;
-                margin-left: -1em;
+            .document-body {
                 padding: 1em;
-                padding-left: 2.5em;
-                background-color: #fff;
-                background: #fff url('../images/paper-texture.png') repeat;
-                .css3_border_radius(5px);
-                .css3_box_shadow(2px, 2px, 5px, #333);
                 
                 .document-element {
                     padding: 1em;
@@ -199,6 +252,23 @@
                     }
                 }
             }
+        }
+    }
+    
+    #footer {
+        .grid_span(6);
+        .grid_prepend(2);
+        font-size:50%;
+        color: @light_border;
+        text-align:left;
+        
+        a {
+            color: @light_border;
+        }
+        
+        li {
+            display: inline;
+            padding-right:1em;
         }
     }
 }
