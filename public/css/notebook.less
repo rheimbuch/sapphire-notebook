@@ -114,8 +114,51 @@
                 .css3_border_radius(5px);
                 .css3_box_shadow(2px, 2px, 5px, #333);
                 
-                .ui.notebook.doc_elements;
+                .document-element {
+                    padding: 1em;
+                    text-align:left;
+                    background-color: @text_background;
+                    border: 1px solid @text_background;
                 
+                    &:hover { 
+                        .css3_border_radius();
+                        background-color: @light_highlight2;
+                        border: 1px solid @highlight2;
+                    }
+    
+                    &.selected {
+                        border: 1px dotted #395BFF;
+                    }
+                }
+
+                .text-block {
+                    .document-element
+                }
+
+                .table-block {
+                    .document-element;
+    
+                    table {
+                        border: 1px solid #6699CC;
+                        border-collapse: collapse;
+                        margin: 20px;
+        
+                        th {
+                            border-bottom: 1px dashed #6699CC;
+                            padding: 12px;
+                        }
+        
+                        td {
+                            color: #666699;
+                            padding: 9px;
+                        }
+        
+                        tbody tr:hover td {
+                            background-color: #D0DAFD;
+                            color: #333399;
+                        }
+                    }
+                }
             }
         }
     }
