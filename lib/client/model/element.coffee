@@ -1,5 +1,5 @@
 define ["backbone", "multifn/multifn", "showdown"], (Backbone, Multi, showdown) ->
-  markdownConvertor = new showdown.Showdown.convertor()
+  markdownConvertor = new showdown.Showdown.converter()
   formatter = Multi()
     
 
