@@ -1,0 +1,3 @@
+[submodule "vendor/nodules"]
+	path = vendor/nodules
+	url = git://github.com/kriszyp/nodules.git
